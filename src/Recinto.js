@@ -18,19 +18,15 @@ class Recinto {
 
     compatibilidade(animal, quantidade){
         /* Esse metódo verifica se o animal a ser inserido é 
-         * compatível com o Recinto e os seus nobos"vizinhos"
+         * compatível com o Recinto e os seus novos "vizinhos"
          * que já estão nele
          */
-
-        if (animal.especie == 'MACACO' && quantidade <= 1){
-            if (this.animaisExistentes.length <= 0){
-                return false;
-            }
+        
+        if (this.simularOcupacao(animal, quantidade) < 0){
+            return false;
         }
 
-        const espacoParaOcupar = animal.tam * quantidade;
-
-        if (espacoParaOcupar > this.espacoLivre){
+        if (!animal.particularidade(this, quantidade)){
             return false;
         }
 
@@ -41,7 +37,8 @@ class Recinto {
             for (var biomaRecinto of this.bioma){
                 if (biomaAnimal == biomaRecinto){
                     return true; 
-                    /* Se chegou aqui então o animal novo tem um bioma
+                    /* 
+                     * Se chegou aqui então o animal novo tem um bioma
                      * em comum com o recinto
                     */
                 }
@@ -55,7 +52,7 @@ class Recinto {
         /*
          * Esse metódo "simula" a entrada do novo animal
          * no recinto, gerando um novo espaço livre baseado em
-         * quanto espaço o novos animais vão ocupar nele.
+         * quanto espaço os novos animais vão ocupar nele.
         */
        
         var novoEspacoLivre = this.espacoLivre - (animal.tam * quantidade);

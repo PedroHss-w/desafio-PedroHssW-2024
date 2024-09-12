@@ -1,6 +1,6 @@
 class Especie {
-    constructor(especie, tam, bioma, dieta){
-        Object.assign(this, {especie, tam, bioma, dieta});
+    constructor(especie, tam, bioma, dieta, particularidade=()=>true){
+        Object.assign(this, {especie, tam, bioma, dieta, particularidade});
     }
 
     vizinhosCompativeis(recinto){
@@ -11,19 +11,19 @@ class Especie {
 
         const vizinhanca = recinto.animaisExistentes;
 
-        var resultado = true;
+        var compatibilidade = true;
 
         for (var vizinho of vizinhanca){
             if (this.dieta == 'carnivoro' && this.especie != vizinho.animal.especie){
-                resultado = false;
+                compatibilidade = false;
                 break;
             } else if (vizinho.animal.dieta == 'carnivoro' && this.dieta != 'carnivoro'){
-                resultado = false;
+                compatibilidade = false;
                 break;
             }
         }
 
-        return resultado;
+        return compatibilidade;
     }
 }
 

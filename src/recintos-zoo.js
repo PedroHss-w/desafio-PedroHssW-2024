@@ -4,16 +4,17 @@
 
 import { Especie } from "./Especie.js";
 import { Recinto } from "./Recinto.js";
+import { particularidadeHipopotamo, particularidadeMacaco } from "./particularidades.js";
+
 
 // Criação dos Animais e Recintos
-
 const animais = {
     LEAO: new Especie('LEAO', 3, ['savana'], 'carnivoro'),
     LEOPARDO: new Especie('LEOPARDO', 2, ['savana'], 'carnivoro'),
     CROCODILO: new Especie('CROCODILO', 3, ['rio'], 'carnivoro'),
-    MACACO: new Especie('MACACO', 1, ['savana', 'floresta'], 'onivoro'),
+    MACACO: new Especie('MACACO', 1, ['savana', 'floresta'], 'onivoro', particularidadeMacaco),
     GAZELA: new Especie('GAZELA', 2, ['savana'], 'herbivoro'),
-    HIPOPOTAMO: new Especie('HIPOPOTAMO', 4, ['savana', 'rio'], 'onivoro'),
+    HIPOPOTAMO: new Especie('HIPOPOTAMO', 4, ['savana', 'rio'], 'onivoro', particularidadeHipopotamo),
 }
 
 
