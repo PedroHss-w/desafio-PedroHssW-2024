@@ -18,6 +18,7 @@ Foi utilizado conceitos de POO (Programação Orientada a Objeto) nas principais
 ## TESTES UNITÁRIOS
 Também criei meus próprios testes no arquivo "novos-testes.test.js", onde posso verificar algumas das regras que acabaram não sendo bem cobertas nos testes padrão (Seguindo os conceitos de Arrenge, Act e Assert).
 
+## TABELAS E REGRAS
 ### RECINTOS EXISTENTES
 
  O zoológico possui os seguintes recintos disponíveis.
