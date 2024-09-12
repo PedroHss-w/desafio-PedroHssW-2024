@@ -6,9 +6,17 @@
 1. Descrição do Desafio
 2. Conceitos do Código
 3. Testes Unitários
+4. Tabelas e Regras
 
 ## DESCRIÇÃO DO DESAFIO
 Para ajudar a organização de um Zoológico, construi um algoritmo com a lógica necessária para atender os requisitos e particularidades de cada animal do zoológico e indicar os recintos onde eles se sintam confortáveis.
+
+## CONCEITOS DO CÓDIGO
+
+Foi utilizado conceitos de POO (Programação Orientada a Objeto) nas principais classes do algoritmo, com funções e metódos descritivos e comentários pontuais, eficientes e explicativos.
+
+## TESTES UNITÁRIOS
+Também criei meus próprios testes no arquivo "novos-testes.test.js", onde posso verificar algumas das regras que acabaram não sendo bem cobertas nos testes padrão (Seguindo os conceitos de Arrenge, Act e Assert).
 
 ### RECINTOS EXISTENTES
 
@@ -55,12 +63,3 @@ Por exemplo, se chegar um lote de 12 macacos, não é possível colocar 6 em 2 r
 4) Caso animal informado seja inválido, apresenta erro "Animal inválido"
 5) Caso quantidade informada seja inválida, apresenta erro "Quantidade inválida"
 6) Caso não haja recinto possível, apresenta erro "Não há recinto viável"
-
-
-## CONCEITOS DO CÓDIGO
-
-Foi utilizado conceitos de POO (Programação Orientada a Objeto) nas principais classes do algoritmo, com funções e metódos descritivos e comentários pontuais, eficientes e explicativos.
-
-## TESTES UNITÁRIOS
-Também criei meus próprios testes no arquivo "novos-testes.test.js", onde posso verificar algumas das regras que acabaram não sendo bem cobertas nos testes padrão (Seguindo os conceitos de Arrenge, Act e Assert).
-
